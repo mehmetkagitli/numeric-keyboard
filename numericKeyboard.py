@@ -1,0 +1,49 @@
+# kullanıcıdan metin alınır.
+metin = input ( "Metin Giriniz: " )
+
+
+
+def phonekeybord(metin):
+  # küçük harfe dönüştür.
+  metin = metin.lower()
+
+
+  donusum_tablosu = {
+  "a" : [2],
+  "b" : [2, 2],
+  "c" : [2, 2, 2],
+  "d" : [3],
+  "e" : [3, 3],
+  "f" : [3, 3, 3],
+  "g" : [4],
+  "h" : [4, 4],
+  "i" : [4, 4, 4],
+  "j" : [5],
+  "k" : [5, 5],
+  "l" : [5, 5, 5],
+  "m" : [6],
+  "n" : [6, 6],
+  "o" : [6, 6, 6],
+  "p" : [7],
+  "q" : [7, 7],
+  "r" : [7, 7, 7],
+  "s" : [7, 7, 7, 7],
+  "t" : [8],
+  "u" : [8, 8],
+  "v" : [8, 8, 8],
+  "w" : [9],
+  "x" : [9, 9],
+  "y" : [9, 9, 9],
+  "z" : [9, 9, 9, 9],
+  " " : [0],
+}
+
+  tamsayı_gösterim= []
+  for character in metin:
+    if character in donusum_tablosu:
+      tamsayı_gösterim.append(donusum_tablosu[character])
+    else:
+      None
+  return tamsayı_gösterim
+
+print (phonekeybord(metin))
